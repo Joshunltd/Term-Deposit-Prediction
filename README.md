@@ -1,19 +1,19 @@
 
-# 📊 Term Deposit Subscription Prediction
+# Term Deposit Subscription Prediction
 
 This project uses machine learning to predict whether a client will subscribe to a term deposit based on a Portuguese bank’s marketing data. It includes full exploratory data analysis, feature engineering, model development, evaluation, and deployment via a Streamlit web app.
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
-- **Objective**: Predict client subscription to a term deposit (`yes` or `no`) using features such as call duration, employment status, and economic indicators.
+- **Objective**: Predict client subscription to a term deposit ('yes' or 'no') using features such as call duration, employment status, and economic indicators.
 - **Dataset**: Bank Marketing Data from a Portuguese financial institution (`bank-additional-full.csv`)
-- **Target Variable**: `y` (subscription to a term deposit)
+- **Target Variable**: 'y' (subscription to a term deposit)
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 1. **Exploratory Data Analysis (EDA)**
    - Data profiling, class distribution, correlation matrix, and mutual information ranking
@@ -31,7 +31,7 @@ This project uses machine learning to predict whether a client will subscribe to
 
 ---
 
-## 🧪 Performance Metrics
+## Performance Metrics
 
 - **Accuracy**: ~90%
 - **Precision**: High
@@ -72,7 +72,7 @@ streamlit run app.py
 
 ## ⚙️ Requirements
 
-- Python 3.8+
+- Python 3.13+
 - pandas, numpy, scikit-learn, imbalanced-learn, matplotlib, seaborn
 - streamlit
 
