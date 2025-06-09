@@ -62,7 +62,8 @@ streamlit run app.py
 ├── models/
 │   ├── model.pkl
 │   ├── scaler.pkl
-│   └── feature_names.pkl
+│   ├── numeric_features.pkl
+    └── feature_names.pkl
 ├── app.py               # Streamlit app
 ├── requirements.txt     # Python dependencies
 ├── README.md            # Project overview
