@@ -41,7 +41,7 @@ This project uses machine learning to predict whether a client will subscribe to
 
 ---
 
-## 💻 Streamlit App
+## Streamlit App
 
 An interactive Streamlit application is included for end users to test the model in real time by entering client attributes and receiving a prediction.
 
@@ -52,7 +52,7 @@ streamlit run app.py
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 ├── data/
@@ -71,7 +71,7 @@ streamlit run app.py
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Python 3.13+
 - pandas, numpy, scikit-learn, imbalanced-learn, matplotlib, seaborn
@@ -84,14 +84,12 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 Key Insights
+##  Key Insights
 
 - Call duration and economic variables are the strongest predictors.
 - Clients contacted in specific months or under certain economic conditions are more likely to subscribe.
 - SMOTE significantly improved model sensitivity to the minority class.
 
----
 
-## 📫 Contact
 
-For questions or feedback, feel free to reach out!
+
