@@ -17,7 +17,8 @@ with open("numeric_features.pkl", "rb") as f:
     numeric_features = pickle.load(f)
 
 st.title("Term Deposit Subscription Predictor")
-# Define eager profile values
+
+# Defining by prefilling with top 10 features
 prefill = {
     'age': 35,
     'duration': 620,
@@ -66,7 +67,7 @@ input_df = user_input_form(prefill)
 # One-hot encode input to match training set
 input_encoded = pd.get_dummies(input_df)
 
-# adding any missing columns (from training)
+# Adding any missing columns (from training)
 missing_cols = set(feature_names) - set(input_encoded.columns)
 for col in missing_cols:
     input_encoded[col] = 0
@@ -80,7 +81,7 @@ input_encoded[numeric_features] = scaler.transform(input_encoded[numeric_feature
 # For the prediction
 if st.button("🔍 Predict"):
     proba_yes = model.predict_proba(input_encoded)[0][1]
-    threshold = 0.29
+    threshold = 0.3
     prediction = "YES ✅" if proba_yes >= threshold else "NO ❌"
 
     st.write(f"Debug - Raw Probability of Yes: {proba_yes:.4f}")
