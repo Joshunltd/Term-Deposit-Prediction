@@ -84,4 +84,4 @@ if st.button("Predict"):
 
     result = "YES ✅" if pred == 1 else "NO ❌"
     st.subheader(f"Prediction: {result}")
-    st.write(f"Probability of Subscription: **{prob:.4%}**")
+    st.write(f"Probability of Subscription: **{prob:.9%}**")
