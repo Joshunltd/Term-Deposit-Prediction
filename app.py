@@ -21,21 +21,6 @@ st.title("Term Deposit Subscription Predictor")
 # This is the user inout form
 def user_input_form():
     age = st.number_input("Age", 18, 100, 30)
-    job = st.selectbox("Job", [
-        'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management',
-        'retired', 'self-employed', 'services', 'student', 'technician', 'unemployed', 'unknown'
-    ])
-    marital = st.selectbox("Marital Status", ['married', 'single', 'divorced', 'unknown'])
-    education = st.selectbox("Education", ['basic.4y', 'basic.6y', 'basic.9y',
-                                           'high.school', 'illiterate', 'professional.course',
-                                           'university.degree', 'unknown'])
-    default = st.selectbox("Has credit in default?", ['no', 'yes', 'unknown'])
-    housing = st.selectbox("Has housing loan?", ['no', 'yes', 'unknown'])
-    loan = st.selectbox("Has personal loan?", ['no', 'yes', 'unknown'])
-    contact = st.selectbox("Contact communication type", ['cellular', 'telephone'])
-    month = st.selectbox("Last contact month", ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'])
-    day_of_week = st.selectbox("Last contact day", ['mon', 'tue', 'wed', 'thu', 'fri'])
-
     duration = st.number_input("Last contact duration (seconds)", 0, 10000, 300)
     campaign = st.number_input("Number of contacts in campaign", 1, 50, 1)
     pdays = st.number_input("Days since last contact", -1, 999, -1)
@@ -48,15 +33,6 @@ def user_input_form():
 
     input_dict = {
         'age': age,
-        'job': job,
-        'marital': marital,
-        'education': education,
-        'default': default,
-        'housing': housing,
-        'loan': loan,
-        'contact': contact,
-        'month': month,
-        'day_of_week': day_of_week,
         'duration': duration,
         'campaign': campaign,
         'pdays': pdays,
