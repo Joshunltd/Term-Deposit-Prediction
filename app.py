@@ -20,42 +20,24 @@ st.title("Term Deposit Subscription Predictor")
 
 # Defining by prefilling with top 10 features
 prefill = {
-    'age': 35,
-    'duration': 620,
-    'campaign': 1,
+    'age': 51,
+    'duration': 687,
     'pdays': 0,
-    'previous': 2,
-    'emp.var.rate': -1.1,
-    'cons.price.idx': 93.0,
-    'cons.conf.idx': -45.0,
-    'euribor3m': 1.0,
-    'nr.employed': 5000.0
+    'previous': 1
 }
 
 # This is the user inout form
 def user_input_form(prefill):
     age = st.number_input("Age", 18, 100, prefill['age'])
     duration = st.number_input("Last contact duration (seconds)", 0, 10000, prefill['duration'])
-    campaign = st.number_input("Number of contacts in campaign", 1, 50, prefill['campaign'])
     pdays = st.number_input("Days since last contact", -1, 999, prefill['pdays'])
     previous = st.number_input("Number of previous contacts", 0, 100, prefill['previous'])
-    emp_var_rate = st.number_input("Employment variation rate", -3.0, 3.0, prefill['emp.var.rate'])
-    cons_price_idx = st.number_input("Consumer price index", 90.0, 100.0, prefill['cons.price.idx'])
-    cons_conf_idx = st.number_input("Consumer confidence index", -60.0, 0.0, prefill['cons.conf.idx'])
-    euribor3m = st.number_input("Euribor 3 month rate", 0.0, 6.0, prefill['euribor3m'])
-    nr_employed = st.number_input("Number of employees", 4000.0, 5500.0, prefill['nr.employed'])
 
     input_dict = {
         'age': age,
         'duration': duration,
-        'campaign': campaign,
         'pdays': pdays,
-        'previous': previous,
-        'emp.var.rate': emp_var_rate,
-        'cons.price.idx': cons_price_idx,
-        'cons.conf.idx': cons_conf_idx,
-        'euribor3m': euribor3m,
-        'nr.employed': nr_employed
+        'previous': previous
     }
 
     return pd.DataFrame([input_dict])
