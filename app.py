@@ -20,16 +20,16 @@ st.title("Term Deposit Subscription Predictor")
 
 # Defining by prefilling with top 10 features
 eager_profile = {
-    'age': 30,
-    'duration': 550,
+    'age': 41,
+    'duration': 1575,
     'campaign': 1,
-    'pdays': -1,
+    'pdays': 999,
     'previous': 0,
-    'emp.var.rate': -1.8,
-    'cons.price.idx': 92.9,
+    'emp.var.rate': 1.1,
+    'cons.price.idx': 93.9,
     'cons.conf.idx': -36.4,
-    'euribor3m': 1.3,
-    'nr.employed': 5099.1
+    'euribor3m': 4.8,
+    'nr.employed': 5191
 }
 
 # This is the user input form
