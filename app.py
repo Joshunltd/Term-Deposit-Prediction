@@ -18,7 +18,7 @@ with open("numeric_features.pkl", "rb") as f:
 
 st.title("Term Deposit Subscription Predictor")
 # Define eager profile values
-eager_profile = {
+prefill = {
     'age': 30,
     'duration': 550,
     'campaign': 1,
@@ -32,17 +32,17 @@ eager_profile = {
 }
 
 # This is the user inout form
-def user_input_form():
-    age = st.number_input("Age", 18, 100, 30)
-    duration = st.number_input("Last contact duration (seconds)", 0, 10000, 300)
-    campaign = st.number_input("Number of contacts in campaign", 1, 50, 1)
-    pdays = st.number_input("Days since last contact", -1, 999, -1)
-    previous = st.number_input("Number of previous contacts", 0, 100, 0)
-    emp_var_rate = st.number_input("Employment variation rate", -3.0, 3.0, 1.1)
-    cons_price_idx = st.number_input("Consumer price index", 90.0, 100.0, 93.0)
-    cons_conf_idx = st.number_input("Consumer confidence index", -60.0, 0.0, -40.0)
-    euribor3m = st.number_input("Euribor 3 month rate", 0.0, 6.0, 4.5)
-    nr_employed = st.number_input("Number of employees", 4000.0, 5500.0, 5200.0)
+def user_input_form(prefill):
+    age = st.number_input("Age", 18, 100, prefill['age'])
+    duration = st.number_input("Last contact duration (seconds)", 0, 10000, prefill['duration'])
+    campaign = st.number_input("Number of contacts in campaign", 1, 50, prefill['campaign'])
+    pdays = st.number_input("Days since last contact", -1, 999, prefill['pdays'])
+    previous = st.number_input("Number of previous contacts", 0, 100, prefill['previous'])
+    emp_var_rate = st.number_input("Employment variation rate", -3.0, 3.0, prefill['emp.var.rate'])
+    cons_price_idx = st.number_input("Consumer price index", 90.0, 100.0, prefill['cons.price.idx'])
+    cons_conf_idx = st.number_input("Consumer confidence index", -60.0, 0.0, prefill['cons.conf.idx'])
+    euribor3m = st.number_input("Euribor 3 month rate", 0.0, 6.0, prefill['euribor3m'])
+    nr_employed = st.number_input("Number of employees", 4000.0, 5500.0, prefill['nr.employed'])
 
     input_dict = {
         'age': age,
