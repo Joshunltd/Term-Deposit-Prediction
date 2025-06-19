@@ -19,16 +19,16 @@ with open("numeric_features.pkl", "rb") as f:
 st.title("Term Deposit Subscription Predictor")
 # Define eager profile values
 prefill = {
-    'age': 30,
-    'duration': 550,
+    'age': 35,
+    'duration': 620,
     'campaign': 1,
-    'pdays': -1,
-    'previous': 0,
-    'emp.var.rate': -1.8,
-    'cons.price.idx': 92.9,
-    'cons.conf.idx': -36.4,
-    'euribor3m': 1.3,
-    'nr.employed': 5099.1
+    'pdays': 0,
+    'previous': 2,
+    'emp.var.rate': -1.1,
+    'cons.price.idx': 93.0,
+    'cons.conf.idx': -45.0,
+    'euribor3m': 1.0,
+    'nr.employed': 5000.0
 }
 
 # This is the user inout form
@@ -80,7 +80,7 @@ input_encoded[numeric_features] = scaler.transform(input_encoded[numeric_feature
 # For the prediction
 if st.button("🔍 Predict"):
     proba_yes = model.predict_proba(input_encoded)[0][1]
-    threshold = 0.3  # More sensitive to positive cases
+    threshold = 0.25 
     prediction = "YES ✅" if proba_yes >= threshold else "NO ❌"
 
     st.write(f"Debug - Raw Probability of Yes: {proba_yes:.4f}")
