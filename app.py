@@ -60,7 +60,7 @@ def user_input_form(prefill):
     return pd.DataFrame([input_dict])
 
 # Getting user input
-input_df = user_input_form()
+input_df = user_input_form(prefill)
 
 # The process input
 # One-hot encode input to match training set
