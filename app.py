@@ -78,10 +78,11 @@ input_encoded = input_encoded[feature_names]
 input_encoded[numeric_features] = scaler.transform(input_encoded[numeric_features])
 
 # For the prediction
-if st.button("Predict"):
-    pred = model.predict(input_encoded)[0]
-    prob = model.predict_proba(input_encoded)[0][1]
+if st.button("🔍 Predict"):
+    proba_yes = model.predict_proba(input_encoded)[0][1]
+    threshold = 0.3  # More sensitive to positive cases
+    prediction = "YES ✅" if proba_yes >= threshold else "NO ❌"
 
-    result = "YES ✅" if pred == 1 else "NO ❌"
-    st.subheader(f"Prediction: {result}")
-    st.write(f"Probability of Subscription: **{prob:.2%}**")
+    st.subheader(f"Prediction: {prediction}")
+    st.write(f"Probability of Subscription: **{proba_yes:.2%}**")
+    st.info(f"Custom threshold used: {threshold}")
