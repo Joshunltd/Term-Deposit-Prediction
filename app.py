@@ -17,6 +17,19 @@ with open("numeric_features.pkl", "rb") as f:
     numeric_features = pickle.load(f)
 
 st.title("Term Deposit Subscription Predictor")
+# Define eager profile values
+eager_profile = {
+    'age': 30,
+    'duration': 550,
+    'campaign': 1,
+    'pdays': -1,
+    'previous': 0,
+    'emp.var.rate': -1.8,
+    'cons.price.idx': 92.9,
+    'cons.conf.idx': -36.4,
+    'euribor3m': 1.3,
+    'nr.employed': 5099.1
+}
 
 # This is the user inout form
 def user_input_form():
