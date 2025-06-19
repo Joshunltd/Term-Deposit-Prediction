@@ -83,6 +83,7 @@ if st.button("🔍 Predict"):
     threshold = 0.3  # More sensitive to positive cases
     prediction = "YES ✅" if proba_yes >= threshold else "NO ❌"
 
+    st.write(f"Debug - Raw Probability of Yes: {proba_yes:.4f}")
     st.subheader(f"Prediction: {prediction}")
     st.write(f"Probability of Subscription: **{proba_yes:.2%}**")
     st.info(f"Custom threshold used: {threshold}")
