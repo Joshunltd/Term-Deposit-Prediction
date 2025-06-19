@@ -63,7 +63,7 @@ input_encoded[numeric_features] = scaler.transform(input_encoded[numeric_feature
 # For the prediction
 if st.button("🔍 Predict"):
     proba_yes = model.predict_proba(input_encoded)[0][1]
-    threshold = 0.27
+    threshold = 0.28
     prediction = "YES ✅" if proba_yes >= threshold else "NO ❌"
 
     st.write(f"Debug - Raw Probability of Yes: {proba_yes:.4f}")
