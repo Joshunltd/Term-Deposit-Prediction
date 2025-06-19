@@ -85,6 +85,7 @@ if st.button("Predict"):
 
     result = "YES ✅" if pred == 1 else "NO ❌"
     st.subheader(f"Prediction: {result}")
-    st.write(f"🔢 Raw probability of 'YES': **{proba_yes:.4f}**")
-    st.info(f"Using adjusted threshold: {threshold}")
+    st.write(f"Raw probability of 'YES': **{proba_yes:.4f}**")
     st.write(f"Probability of Subscription: **{prob:.2%}**")
+    st.info(f"Using adjusted threshold: {threshold}")
+   
