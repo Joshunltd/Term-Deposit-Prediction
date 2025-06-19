@@ -34,16 +34,17 @@ eager_profile = {
 
 # This is the user input form
 def user_input_form():
-    age = st.number_input("Age", 18, 100, eager_profile['age'])
-    duration = st.number_input("Last contact duration (seconds)", 0, 10000, eager_profile['duration'])
-    campaign = st.number_input("Number of contacts in campaign", 1, 50, eager_profile['campaign'])
-    pdays = st.number_input("Days since last contact", -1, 999, eager_profile['pdays'])
-    previous = st.number_input("Number of previous contacts", 0, 100, eager_profile['previous'])
-    emp_var_rate = st.number_input("Employment variation rate", -3.0, 3.0, eager_profile['emp.var.rate'])
-    cons_price_idx = st.number_input("Consumer price index", 90.0, 100.0, eager_profile['cons.price.idx'])
-    cons_conf_idx = st.number_input("Consumer confidence index", -60.0, 0.0, eager_profile['cons.conf.idx'])
-    euribor3m = st.number_input("Euribor 3 month rate", 0.0, 6.0, eager_profile['euribor3m'])
-    nr_employed = st.number_input("Number of employees", 4000.0, 5500.0, eager_profile['nr.employed'])
+    age = st.number_input("Age", 18, 100, int(eager_profile['age']))
+    duration = st.number_input("Last contact duration (seconds)", 0, 10000, int(eager_profile['duration']))
+    campaign = st.number_input("Number of contacts in campaign", 1, 50, int(eager_profile['campaign']))
+    pdays = st.number_input("Days since last contact", -1, 999, int(eager_profile['pdays']))
+    previous = st.number_input("Number of previous contacts", 0, 100, int(eager_profile['previous']))
+    emp_var_rate = st.number_input("Employment variation rate", -3.0, 3.0, float(eager_profile['emp.var.rate']))
+    cons_price_idx = st.number_input("Consumer price index", 90.0, 100.0, float(eager_profile['cons.price.idx']))
+    cons_conf_idx = st.number_input("Consumer confidence index", -60.0, 0.0, float(eager_profile['cons.conf.idx']))
+    euribor3m = st.number_input("Euribor 3 month rate", 0.0, 6.0, float(eager_profile['euribor3m']))
+    nr_employed = st.number_input("Number of employees", 4000.0, 5500.0, float(eager_profile['nr.employed']))
+
     input_dict = {
         'age': age,
         'duration': duration,
